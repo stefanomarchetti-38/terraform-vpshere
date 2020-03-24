@@ -1,0 +1,14 @@
+version: 1
+config:
+  - type: physical
+    name: ens192
+    subnets:
+      - type: static
+        address: 10.126.213.15/24
+        gateway: 10.126.213.1
+  - type: nameserver
+    address:
+      - 10.126.213.19
+    search:
+      - ynap.labs
+      - ocp.ynap.labs

@@ -1,0 +1,14 @@
+version: 1
+config:
+  - type: physical
+    name: ens192
+    subnets:
+      - type: static
+        address: ${DNSMASQ_IP}
+        gateway: ${NETWORK_GATEWAY}
+  - type: nameserver
+    address:
+      - 127.0.0.1
+      - ${SECONDARY_DNS}
+    search:
+      - ${CLUSTER_DOMAIN}

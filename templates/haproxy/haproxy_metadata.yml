@@ -1,0 +1,13 @@
+version: 1
+config:
+  - type: physical
+    name: ens192
+    subnets:
+      - type: static
+        address: ${HAPROXY_IP}
+        gateway: ${NETWORK_GATEWAY}
+        dns_nameservers:
+          - ${PRIMARY_DNS}
+          - ${SECONDARY_DNS}
+        dns_search:
+          - ${CLUSTER_DOMAIN}

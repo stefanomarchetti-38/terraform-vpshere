@@ -1,0 +1,24 @@
+version: 1
+config:
+  - type: physical
+    name: ens192
+    subnets:
+      - type: static
+        address: 10.126.211.17/24
+        gateway: 10.126.211.1
+  - type: physical
+    name: ens224
+    subnets:
+      - type: static
+        address: 10.126.212.17/24
+  - type: physical
+    name: ens256
+    subnets:
+      - type: static
+        address: 10.126.213.17/24
+  - type: nameserver
+    address:
+      - 8.8.8.8
+      - 8.8.4.4
+    search:
+      - ynap.labs
